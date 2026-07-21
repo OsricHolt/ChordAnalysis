@@ -3,7 +3,7 @@ import wave
 import matplotlib.pyplot as plt
 
 sample_rate = 41000
-frequency = 1000
+frequency = 440
 duration = 2.0
 amplitude = 0.5
 
@@ -11,13 +11,13 @@ amplitude = 0.5
 num_samples = sample_rate * duration # calculate num of sample in wav file
 timestep = np.arange(num_samples) / sample_rate # generate a vector ennum by num of samples and scale to time
 
-## Notes
-C = amplitude * np.sin(2 * np.pi * 261.63 * 2 * timestep) # multiply constants and apply sin to the vector
-E = amplitude * np.sin(2 * np.pi * 329.63 * 2 * timestep) # multiply constants and apply sin to the vector
-G = amplitude * np.sin(2 * np.pi * 392.00 * 2 * timestep) # multiply constants and apply sin to the vector
+# ## Notes
+# C = amplitude * np.sin(2 * np.pi * 261.63 * 2 * timestep) # multiply constants and apply sin to the vector
+# E = amplitude * np.sin(2 * np.pi * 329.63 * 2 * timestep) # multiply constants and apply sin to the vector
+# G = amplitude * np.sin(2 * np.pi * 392.00 * 2 * timestep) # multiply constants and apply sin to the vector
 
 
-# signal = amplitude * np.sin(2 * np.pi * frequency * timestep) # multiply constants and apply sin to the vector
+signal = amplitude * np.sin(2 * np.pi * frequency * timestep) # multiply constants and apply sin to the vector
 signal = C + E + G # add 3 notes into one signal to make a chord
 signal_int = np.int16(signal * 32767) # scale values to 16 bit integers
 
