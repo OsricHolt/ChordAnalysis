@@ -18,7 +18,7 @@ timestep = np.arange(num_samples) / sample_rate # generate a vector ennum by num
 
 
 signal = amplitude * np.sin(2 * np.pi * frequency * timestep) # multiply constants and apply sin to the vector
-signal = C + E + G # add 3 notes into one signal to make a chord
+# signal = C + E + G # add 3 notes into one signal to make a chord
 signal_int = np.int16(signal * 32767) # scale values to 16 bit integers
 
 ## Converting to a WAV file
