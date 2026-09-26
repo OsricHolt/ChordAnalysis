@@ -3,8 +3,8 @@ import wave
 import matplotlib.pyplot as plt
 
 sample_rate = 41000
-frequency = 440
-duration = 2.0
+frequency = 440.43
+duration = 0.5
 amplitude = 0.5
 
 
